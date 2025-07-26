@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a Question
+    url: https://github.com/barnesy/ai-agent-system/discussions
+    about: Ask questions and discuss with the community
+  - name: Read the Docs
+    url: https://github.com/barnesy/ai-agent-system/tree/main/docs
+    about: Check our documentation first
+  - name: North Star Vision
+    url: https://github.com/barnesy/ai-agent-system/blob/main/docs/NORTH_STAR.md
+    about: Understand our long-term vision

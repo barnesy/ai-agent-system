@@ -1,5 +1,10 @@
 # Contributing to AI Agent System
 
+## Before You Start
+1. Read our [North Star Vision](../docs/NORTH_STAR.md) to understand our direction
+2. Check existing [Issues](https://github.com/barnesy/ai-agent-system/issues) for similar ideas
+3. For major changes, open a Design Decision issue first
+
 ## Required Documentation Updates
 
 Every significant change MUST update relevant documentation:

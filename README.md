@@ -3,7 +3,9 @@
 A modular agent architecture for massive innovation in human-AI collaboration quality.
 
 ## Vision
-Transform how humans work with AI through breakthrough improvements in understanding, efficiency, and outcomes.
+Transform software development by making AI collaboration feel like working with a team of the world's best developers.
+
+**[📍 Read our North Star Vision](docs/NORTH_STAR.md)** - See where we're headed and why.
 
 ## Key Features
 - **Modular Agent Architecture**: Specialized agents for different tasks

@@ -3,6 +3,8 @@
 ## Executive Summary
 Transform human-AI collaboration through a modular agent system that delivers 10x improvements in development velocity, code quality, and user satisfaction. This system will fundamentally change how developers work with AI by creating specialized, intelligent agents that work together seamlessly.
 
+**[📍 See our North Star Vision](NORTH_STAR.md)** for the long-term goal we're building toward.
+
 ## Vision & Goals
 
 ### Primary Objective
@@ -207,13 +209,38 @@ agents:
 - **Trust**: Transparent operations, explainable decisions
 - **Integration**: Support popular tools from day one
 
+## Decision Making Process
+
+All major decisions follow our GitHub-based process:
+
+1. **Open an Issue** using appropriate template:
+   - Feature Proposal for new capabilities
+   - Design Decision for architectural changes
+   - Bug Report for issues
+
+2. **Community Discussion** 
+   - Allow time for input
+   - Consider all perspectives
+   - Document trade-offs
+
+3. **Alignment Check**
+   - Does it move us toward our North Star?
+   - What metrics will improve?
+   - What's the user impact?
+
+4. **Implementation**
+   - Create PR referencing the issue
+   - Update design-decisions.md
+   - Ensure documentation is current
+
 ## Next Steps
 
-1. Complete core agent implementations
-2. Build real-world workflow examples
-3. Create developer documentation
-4. Launch beta program
-5. Gather feedback and iterate
+Major initiatives are tracked as GitHub Issues:
+1. [Real AI Integration](https://github.com/barnesy/ai-agent-system/issues) 
+2. [CLI Tool Development](https://github.com/barnesy/ai-agent-system/issues)
+3. [Performance Metrics](https://github.com/barnesy/ai-agent-system/issues)
+4. [VS Code Extension](https://github.com/barnesy/ai-agent-system/issues)
+5. [Community Building](https://github.com/barnesy/ai-agent-system/issues)
 
 ---
 
