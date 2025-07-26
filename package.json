@@ -8,7 +8,11 @@
     "dev": "tsc --watch",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "demo": "npm run build && node dist/examples/workflow-demo.js",
+    "example:bugfix": "npm run build && node dist/workflows/bug-fix-workflow.js",
+    "example:feature": "npm run build && node dist/workflows/feature-development-workflow.js",
+    "example:review": "npm run build && node dist/workflows/code-review-workflow.js"
   },
   "repository": {
     "type": "git",
