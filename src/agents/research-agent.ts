@@ -1,4 +1,5 @@
 import { BaseAgent, AgentMessage, AgentCapabilities } from './base-agent';
+import { aiAdapter } from '../ai/ai-adapter';
 
 export class ResearchAgent extends BaseAgent {
   constructor() {
@@ -27,7 +28,6 @@ export class ResearchAgent extends BaseAgent {
   async execute(message: AgentMessage): Promise<AgentMessage> {
     const { task, context } = message.payload;
     
-    // Simulate research operations
     const results = await this.performResearch(task, context);
     
     return {
@@ -44,7 +44,22 @@ export class ResearchAgent extends BaseAgent {
   }
 
   private async performResearch(task: string, context: any): Promise<any> {
-    // Placeholder for actual research logic
+    if (this.useAI) {
+      // Use AI for research
+      const request = aiAdapter.createAgentRequest(
+        this.name,
+        task,
+        context,
+        this.getSystemPrompt()
+      );
+
+      const response = await aiAdapter.complete(request);
+      
+      // Parse AI response into structured format
+      return this.parseAIResponse(response.content);
+    }
+
+    // Fallback to mock response
     return {
       findings: [
         'Located relevant code patterns',
@@ -60,5 +75,47 @@ export class ResearchAgent extends BaseAgent {
         'src/components/shared.ts'
       ]
     };
+  }
+
+  protected getSystemPrompt(): string {
+    return `You are a Research Agent - an expert code archaeologist and pattern finder.
+
+Your role is to:
+1. Analyze codebases to understand structure and patterns
+2. Find relevant code examples and implementations
+3. Identify dependencies and relationships
+4. Provide actionable insights and recommendations
+
+When researching, focus on:
+- Code patterns and conventions used
+- Architecture decisions evident in the code
+- Similar implementations that can be referenced
+- Potential issues or improvements
+
+Format your response as JSON with these fields:
+{
+  "findings": ["key discoveries"],
+  "recommendations": ["actionable suggestions"],
+  "codeLocations": ["relevant file paths"],
+  "patterns": ["identified patterns"],
+  "dependencies": ["key dependencies found"]
+}`;
+  }
+
+  private parseAIResponse(content: string): any {
+    try {
+      // Try to parse as JSON first
+      return JSON.parse(content);
+    } catch {
+      // If not JSON, structure the text response
+      const lines = content.split('\n').filter(line => line.trim());
+      
+      return {
+        findings: lines.slice(0, 3),
+        recommendations: lines.slice(3, 5),
+        codeLocations: [],
+        analysis: content
+      };
+    }
   }
 }

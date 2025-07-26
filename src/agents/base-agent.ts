@@ -20,6 +20,7 @@ export interface AgentCapabilities {
 export abstract class BaseAgent {
   protected name: string;
   protected capabilities: AgentCapabilities;
+  protected useAI: boolean = false;
 
   constructor(name: string, capabilities: AgentCapabilities) {
     this.name = name;
@@ -34,5 +35,21 @@ export abstract class BaseAgent {
 
   getName(): string {
     return this.name;
+  }
+
+  /**
+   * Enable AI for this agent
+   */
+  enableAI(): void {
+    this.useAI = true;
+  }
+
+  /**
+   * Get system prompt for this agent
+   * Override this to provide agent-specific prompts
+   */
+  protected getSystemPrompt(): string {
+    return `You are the ${this.name}, a specialized AI agent in a modular system.
+Your role is to handle tasks related to your specialization with expertise and precision.`;
   }
 }
