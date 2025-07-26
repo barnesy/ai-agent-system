@@ -1,16 +1,24 @@
 import { AIProvider, AIRequest, AIResponse, AIError } from './types';
 import { MockAIProvider } from './providers/mock-provider';
+import { AnthropicProvider } from './providers/anthropic-provider';
+import { OpenAIProvider } from './providers/openai-provider';
+import { config } from '../config/config';
 
 /**
  * AI Adapter - Manages AI providers and routes requests
  */
 export class AIAdapter {
   private providers: Map<string, AIProvider> = new Map();
-  private defaultProvider: string = 'mock';
+  private defaultProvider: string;
 
   constructor() {
-    // Register default mock provider
+    // Register all providers
     this.registerProvider(new MockAIProvider());
+    this.registerProvider(new AnthropicProvider());
+    this.registerProvider(new OpenAIProvider());
+
+    // Set default provider from config
+    this.defaultProvider = config.get().ai.defaultProvider || 'mock';
   }
 
   /**

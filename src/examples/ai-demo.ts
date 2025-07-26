@@ -61,6 +61,23 @@ async function demonstrateAI() {
   console.log('-'.repeat(50));
   console.log('Check console logs for detailed usage metrics');
 
+  // Test provider costs
+  console.log('\n💰 Cost Estimates:');
+  console.log('-'.repeat(50));
+  const testRequest = aiAdapter.createAgentRequest(
+    'ResearchAgent',
+    'analyze a complex system'
+  );
+  
+  providers.forEach(provider => {
+    try {
+      const cost = aiAdapter.estimateCost(testRequest, provider);
+      console.log(`${provider}: $${cost.toFixed(4)} estimated`);
+    } catch (error) {
+      console.log(`${provider}: Not configured`);
+    }
+  });
+
   // Configuration example
   console.log('\n⚙️  Configuration:');
   console.log('-'.repeat(50));
@@ -70,6 +87,13 @@ async function demonstrateAI() {
   console.log('\nOr update config:');
   console.log('- ai-agent config set anthropic.apiKey your-key');
   console.log('- ai-agent config set ai.defaultProvider anthropic');
+  
+  // Show which providers are ready
+  console.log('\n🔌 Provider Status:');
+  console.log('-'.repeat(50));
+  console.log('- mock: ✅ Always available');
+  console.log(`- anthropic: ${config.getApiKey('anthropic') ? '✅ Configured' : '❌ Needs API key'}`);
+  console.log(`- openai: ${config.getApiKey('openai') ? '✅ Configured' : '❌ Needs API key'}`);
 }
 
 if (require.main === module) {
