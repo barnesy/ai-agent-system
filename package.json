@@ -13,6 +13,7 @@
     "example:bugfix": "npm run build && node dist/workflows/bug-fix-workflow.js",
     "example:feature": "npm run build && node dist/workflows/feature-development-workflow.js",
     "example:review": "npm run build && node dist/workflows/code-review-workflow.js",
+    "example:ai": "npm run build && node dist/examples/ai-demo.js",
     "validate": "npm run build && node dist/scripts/validate-structure.js",
     "precommit": "npm run validate && npm run lint && npm run typecheck"
   },
