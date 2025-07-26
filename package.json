@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Modular AI agent system for enhanced human-AI collaboration",
   "main": "dist/index.js",
+  "bin": {
+    "ai-agent": "./dist/cli/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
@@ -28,6 +31,12 @@
   ],
   "author": "barnesy",
   "license": "MIT",
+  "dependencies": {
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "ora": "^5.4.1"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^20.0.0",
