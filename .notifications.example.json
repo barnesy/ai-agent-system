@@ -1,0 +1,14 @@
+{
+  "slack": {
+    "webhookUrl": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+  },
+  "email": {
+    "to": "your-email@example.com",
+    "from": "ai-agent-system@example.com"
+  },
+  "github": {
+    "repo": "barnesy/ai-agent-system",
+    "issue": null
+  },
+  "webhook": "https://your-webhook-endpoint.com/notifications"
+}
