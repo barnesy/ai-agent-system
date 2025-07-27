@@ -1,11 +1,11 @@
 import chalk from 'chalk';
 import ora from 'ora';
-import { Orchestrator } from '../../orchestrator/orchestrator';
-import { ResearchAgent } from '../../agents/research-agent';
-import { PlanningAgent } from '../../agents/planning-agent';
-import { ImplementationAgent } from '../../agents/implementation-agent';
-import { TestingAgent } from '../../agents/testing-agent';
-import { DocumentationAgent } from '../../agents/documentation-agent';
+import { OrchestratorWithMetrics as Orchestrator } from '../../orchestrator/orchestrator-with-metrics';
+import { ResearchAgentEnhanced as ResearchAgent } from '../../agents/research-agent-enhanced';
+import { PlanningAgentEnhanced as PlanningAgent } from '../../agents/planning-agent-enhanced';
+import { ImplementationAgentEnhanced as ImplementationAgent } from '../../agents/implementation-agent-enhanced';
+import { TestingAgentEnhanced as TestingAgent } from '../../agents/testing-agent-enhanced';
+import { DocumentationAgentEnhanced as DocumentationAgent } from '../../agents/documentation-agent-enhanced';
 import { metricsCollector } from '../../metrics';
 
 export async function featureCommand(description: string, options: {

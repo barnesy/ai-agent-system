@@ -1,10 +1,10 @@
 import chalk from 'chalk';
 import ora from 'ora';
-import { Orchestrator } from '../../orchestrator/orchestrator';
-import { ResearchAgent } from '../../agents/research-agent';
-import { ImplementationAgent } from '../../agents/implementation-agent';
-import { TestingAgent } from '../../agents/testing-agent';
-import { QualityAgent } from '../../agents/quality-agent';
+import { OrchestratorWithMetrics as Orchestrator } from '../../orchestrator/orchestrator-with-metrics';
+import { ResearchAgentEnhanced as ResearchAgent } from '../../agents/research-agent-enhanced';
+import { ImplementationAgentEnhanced as ImplementationAgent } from '../../agents/implementation-agent-enhanced';
+import { TestingAgentEnhanced as TestingAgent } from '../../agents/testing-agent-enhanced';
+import { QualityAgentEnhanced as QualityAgent } from '../../agents/quality-agent-enhanced';
 import { metricsCollector } from '../../metrics';
 
 export async function fixCommand(description: string, options: {

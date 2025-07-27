@@ -1,10 +1,10 @@
 import chalk from 'chalk';
 import ora from 'ora';
 import * as fs from 'fs';
-import { Orchestrator } from '../../orchestrator/orchestrator';
-import { QualityAgent } from '../../agents/quality-agent';
-import { TestingAgent } from '../../agents/testing-agent';
-import { DocumentationAgent } from '../../agents/documentation-agent';
+import { OrchestratorWithMetrics as Orchestrator } from '../../orchestrator/orchestrator-with-metrics';
+import { QualityAgentEnhanced as QualityAgent } from '../../agents/quality-agent-enhanced';
+import { TestingAgentEnhanced as TestingAgent } from '../../agents/testing-agent-enhanced';
+import { DocumentationAgentEnhanced as DocumentationAgent } from '../../agents/documentation-agent-enhanced';
 import { metricsCollector } from '../../metrics';
 
 export async function reviewCommand(file: string, options: {

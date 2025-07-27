@@ -14,6 +14,8 @@ export async function dashboardCommand(options: {
 
   try {
     spinner.stop();
+    // Clear the spinner line
+    process.stdout.write('\r\x1b[K');
 
     if (options.report) {
       // Show detailed report

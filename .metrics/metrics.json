@@ -1,0 +1,164 @@
+[
+  {
+    "id": "task-1753580732696",
+    "taskType": "bug-fix",
+    "description": "Test with realistic timing",
+    "startTime": "2025-07-27T01:45:32.696Z",
+    "agentMetrics": [
+      {
+        "agentName": "ResearchAgent",
+        "startTime": "2025-07-27T01:45:32.696Z",
+        "success": true,
+        "endTime": "2025-07-27T01:45:35.655Z",
+        "duration": 2959,
+        "tokenUsage": {
+          "input": 98,
+          "output": 194,
+          "cost": 0.021892541601953613
+        }
+      },
+      {
+        "agentName": "ImplementationAgent",
+        "startTime": "2025-07-27T01:45:35.656Z",
+        "success": true,
+        "endTime": "2025-07-27T01:45:38.462Z",
+        "duration": 2806,
+        "tokenUsage": {
+          "input": 77,
+          "output": 127,
+          "cost": 0.02143610928360751
+        }
+      },
+      {
+        "agentName": "ImplementationAgent",
+        "startTime": "2025-07-27T01:45:38.462Z",
+        "success": true,
+        "endTime": "2025-07-27T01:45:40.393Z",
+        "duration": 1931
+      }
+    ],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 0
+    },
+    "endTime": "2025-07-27T01:45:40.393Z",
+    "duration": 7697,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.12826666666666667,
+      "timeImprovement": 95,
+      "aiQuality": {
+        "codeQualityScore": 85,
+        "bugsIntroduced": 0,
+        "testCoverage": 0
+      },
+      "aiCost": 0.04332865088556112,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.48005618937327
+    }
+  },
+  {
+    "id": "task-1753580773485",
+    "taskType": "bug-fix",
+    "description": "Test timing issue",
+    "startTime": "2025-07-27T01:46:13.485Z",
+    "agentMetrics": [
+      {
+        "agentName": "ResearchAgent",
+        "startTime": "2025-07-27T01:46:13.485Z",
+        "success": true,
+        "endTime": "2025-07-27T01:46:15.105Z",
+        "duration": 1620,
+        "tokenUsage": {
+          "input": 102,
+          "output": 101,
+          "cost": 0.01391771637566497
+        }
+      },
+      {
+        "agentName": "ImplementationAgent",
+        "startTime": "2025-07-27T01:46:15.105Z",
+        "success": true,
+        "endTime": "2025-07-27T01:46:15.903Z",
+        "duration": 798,
+        "tokenUsage": {
+          "input": 93,
+          "output": 111,
+          "cost": 0.02010525910387684
+        }
+      },
+      {
+        "agentName": "ImplementationAgent",
+        "startTime": "2025-07-27T01:46:15.903Z",
+        "success": true,
+        "endTime": "2025-07-27T01:46:18.729Z",
+        "duration": 2826
+      }
+    ],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 0
+    },
+    "endTime": "2025-07-27T01:46:18.729Z",
+    "duration": 5244,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {
+        "codeQualityScore": 85,
+        "bugsIntroduced": 0,
+        "testCoverage": 0
+      },
+      "aiCost": 0.03402297547954181,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.59172429424548
+    }
+  },
+  {
+    "id": "task-1753580778989",
+    "taskType": "feature",
+    "description": "Test metrics integration",
+    "startTime": "2025-07-27T01:46:18.989Z",
+    "agentMetrics": [
+      {
+        "agentName": "ResearchAgent",
+        "startTime": "2025-07-27T01:46:18.990Z",
+        "success": true,
+        "endTime": "2025-07-27T01:46:21.683Z",
+        "duration": 2693,
+        "tokenUsage": {
+          "input": 69,
+          "output": 243,
+          "cost": 0.036078428262024974
+        }
+      },
+      {
+        "agentName": "PlanningAgent",
+        "startTime": "2025-07-27T01:46:21.683Z",
+        "success": true,
+        "endTime": "2025-07-27T01:46:24.324Z",
+        "duration": 2641,
+        "tokenUsage": {
+          "input": 57,
+          "output": 237,
+          "cost": 0.026979059244200423
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T01:46:24.324Z",
+    "duration": 5335,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.06305748750622539,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.24331014992529
+    }
+  }
+]

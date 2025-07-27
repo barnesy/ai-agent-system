@@ -54,24 +54,27 @@ export class MetricsCollector {
     // Calculate AI time from agent metrics
     if (!this.currentTask.comparison && this.currentTask.agentMetrics.length > 0) {
       const aiTimeMs = this.currentTask.agentMetrics.reduce((sum, m) => sum + (m.duration || 0), 0);
-      const aiTimeMinutes = aiTimeMs / 1000 / 60;
+      const aiTimeMinutes = Math.max(0.1, aiTimeMs / 1000 / 60); // Minimum 0.1 minutes (6 seconds)
       
-      // Estimate manual time (10x slower as baseline)
-      const estimatedManualTime = aiTimeMinutes * 10;
+      // Estimate manual time (10x slower as baseline, minimum 5 minutes for any task)
+      const estimatedManualTime = Math.max(5, aiTimeMinutes * 10);
+      
+      // Ensure time improvement is reasonable (cap at 95%)
+      const timeImprovement = Math.min(95, ((estimatedManualTime - aiTimeMinutes) / estimatedManualTime) * 100);
+      
+      // Calculate costs with reasonable minimums
+      const aiCost = Math.max(0.01, this.calculateTotalCost()); // Minimum $0.01
+      const manualCost = estimatedManualTime * (100 / 60); // $100/hour
       
       this.currentTask.comparison = {
         manualTime: estimatedManualTime,
         aiTime: aiTimeMinutes,
-        timeImprovement: ((estimatedManualTime - aiTimeMinutes) / estimatedManualTime) * 100,
+        timeImprovement: timeImprovement,
         aiQuality: this.currentTask.quality,
-        aiCost: this.calculateTotalCost(),
-        manualCost: estimatedManualTime * (100 / 60), // $100/hour
-        costSavings: 0
+        aiCost: aiCost,
+        manualCost: manualCost,
+        costSavings: ((manualCost - aiCost) / manualCost) * 100
       };
-      
-      this.currentTask.comparison.costSavings = 
-        (((this.currentTask.comparison.manualCost || 0) - this.currentTask.comparison.aiCost) / 
-         (this.currentTask.comparison.manualCost || 1)) * 100;
     }
 
     this.storage.push(this.currentTask);
