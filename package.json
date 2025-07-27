@@ -21,6 +21,7 @@
     "example:review": "npm run build && node dist/workflows/code-review-workflow.js",
     "demo:metrics": "npm run build && node dist/demos/metrics-demo.js",
     "demo:memory": "npm run build && node dist/demos/memory-demo.js",
+    "demo:ai": "npm run build && node dist/demos/ai-provider-demo.js",
     "test:notify": "./scripts/test-notify.sh",
     "validate": "npm run build && node dist/scripts/validate-structure.js",
     "precommit": "npm run validate && npm run lint && npm run typecheck && npm run test"

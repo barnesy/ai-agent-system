@@ -2,7 +2,7 @@ import { BaseAgent, AgentMessage, AgentCapabilities } from './base-agent';
 import { mockAIProvider } from '../ai/mock-provider';
 
 export abstract class BaseAgentEnhanced extends BaseAgent {
-  protected aiProvider = mockAIProvider;
+  protected mockProvider = mockAIProvider;
 
   constructor(name: string, capabilities: AgentCapabilities) {
     super(name, capabilities);
@@ -13,10 +13,10 @@ export abstract class BaseAgentEnhanced extends BaseAgent {
     const prompt = this.generatePrompt(message);
     
     // Get AI response with realistic delay
-    const aiResponse = await this.aiProvider.generateResponse(prompt);
+    const aiResponse = await this.mockProvider.generateResponse(prompt);
     
     // Calculate token usage
-    const tokenUsage = this.aiProvider.calculateTokenUsage(prompt, aiResponse);
+    const tokenUsage = this.mockProvider.calculateTokenUsage(prompt, aiResponse);
     
     // Process the response
     const processedResponse = this.processAIResponse(aiResponse, message);

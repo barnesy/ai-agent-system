@@ -61,7 +61,7 @@ export abstract class BaseAgentWithMemory extends BaseAgentEnhanced {
     }
   }
 
-  private async loadContext(message: AgentMessage): Promise<any> {
+  protected async loadContext(message: AgentMessage): Promise<any> {
     // Get agent context
     const agentContext = await contextManager.getContext(
       this.name,
@@ -128,7 +128,7 @@ export abstract class BaseAgentWithMemory extends BaseAgentEnhanced {
       .slice(0, 5);
   }
 
-  private async storeConversationMemory(
+  protected async storeConversationMemory(
     message: AgentMessage,
     response: AgentMessage
   ): Promise<void> {
@@ -191,7 +191,7 @@ export abstract class BaseAgentWithMemory extends BaseAgentEnhanced {
     await memoryStore.add(memory);
   }
 
-  private async updateContext(response: AgentMessage): Promise<void> {
+  protected async updateContext(response: AgentMessage): Promise<void> {
     // Extract knowledge or insights from the response
     const payload = response.payload as any;
     const updates: any = {
