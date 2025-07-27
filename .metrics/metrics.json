@@ -160,5 +160,798 @@
       "manualCost": 8.333333333333334,
       "costSavings": 99.24331014992529
     }
+  },
+  {
+    "id": "task-1753581412312",
+    "taskType": "bug-fix",
+    "description": "Authentication timeout bug",
+    "startTime": "2025-07-27T01:56:52.312Z",
+    "agentMetrics": [
+      {
+        "agentName": "ResearchAgent",
+        "startTime": "2025-07-27T01:56:52.312Z",
+        "success": true,
+        "endTime": "2025-07-27T01:56:54.384Z",
+        "duration": 2072,
+        "tokenUsage": {
+          "input": 108,
+          "output": 130,
+          "cost": 0.023419946499882327
+        }
+      },
+      {
+        "agentName": "QualityAgent",
+        "startTime": "2025-07-27T01:56:54.384Z",
+        "success": true,
+        "endTime": "2025-07-27T01:56:56.187Z",
+        "duration": 1803,
+        "tokenUsage": {
+          "input": 122,
+          "output": 182,
+          "cost": 0.02445992583760637
+        }
+      },
+      {
+        "agentName": "ImplementationAgent",
+        "startTime": "2025-07-27T01:56:56.187Z",
+        "success": true,
+        "endTime": "2025-07-27T01:56:59.024Z",
+        "duration": 2837,
+        "tokenUsage": {
+          "input": 84,
+          "output": 237,
+          "cost": 0.02945533590996438
+        }
+      },
+      {
+        "agentName": "ImplementationAgent",
+        "startTime": "2025-07-27T01:56:59.024Z",
+        "success": true,
+        "endTime": "2025-07-27T01:57:01.118Z",
+        "duration": 2094
+      }
+    ],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 0
+    },
+    "endTime": "2025-07-27T01:57:01.119Z",
+    "duration": 8807,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.14676666666666666,
+      "timeImprovement": 95,
+      "aiQuality": {
+        "codeQualityScore": 85,
+        "bugsIntroduced": 0,
+        "testCoverage": 0
+      },
+      "aiCost": 0.07733520824745307,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.07197750103056
+    }
+  },
+  {
+    "id": "task-1753584048481",
+    "taskType": "bug-fix",
+    "description": "Test bug",
+    "startTime": "2025-07-27T02:40:48.481Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:40:50.437Z",
+    "duration": 1956
+  },
+  {
+    "id": "task-1753584055942",
+    "taskType": "bug-fix",
+    "description": "Error test",
+    "startTime": "2025-07-27T02:40:55.942Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:40:55.942Z",
+        "success": false,
+        "endTime": "2025-07-27T02:40:55.942Z",
+        "duration": 0,
+        "error": "Test error"
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:40:55.942Z",
+    "duration": 0,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.01,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.88
+    }
+  },
+  {
+    "id": "task-1753584060251",
+    "taskType": "bug-fix",
+    "description": "Cost test",
+    "startTime": "2025-07-27T02:41:00.251Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:41:00.251Z",
+        "success": true,
+        "endTime": "2025-07-27T02:41:01.254Z",
+        "duration": 1003,
+        "tokenUsage": {
+          "input": 100,
+          "output": 200,
+          "cost": 0.05
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:41:01.255Z",
+    "duration": 1004,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.05,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.39999999999999
+    }
+  },
+  {
+    "id": "task-1753584061261",
+    "taskType": "feature",
+    "description": "First task",
+    "startTime": "2025-07-27T02:41:01.261Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:41:02.538Z",
+    "duration": 1277
+  },
+  {
+    "id": "task-1753584062546",
+    "taskType": "feature",
+    "description": "Quality test",
+    "startTime": "2025-07-27T02:41:02.546Z",
+    "agentMetrics": [],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 90
+    },
+    "endTime": "2025-07-27T02:41:03.669Z",
+    "duration": 1123
+  },
+  {
+    "id": "task-1753584242503",
+    "taskType": "bug-fix",
+    "description": "Test bug",
+    "startTime": "2025-07-27T02:44:02.503Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:44:03.515Z",
+    "duration": 1012
+  },
+  {
+    "id": "task-1753584249603",
+    "taskType": "bug-fix",
+    "description": "Error test",
+    "startTime": "2025-07-27T02:44:09.603Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:44:09.603Z",
+        "success": false,
+        "endTime": "2025-07-27T02:44:09.603Z",
+        "duration": 0,
+        "error": "Test error"
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:44:09.603Z",
+    "duration": 0,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.01,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.88
+    }
+  },
+  {
+    "id": "task-1753584255572",
+    "taskType": "bug-fix",
+    "description": "Cost test",
+    "startTime": "2025-07-27T02:44:15.572Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:44:15.572Z",
+        "success": true,
+        "endTime": "2025-07-27T02:44:16.575Z",
+        "duration": 1003,
+        "tokenUsage": {
+          "input": 100,
+          "output": 200,
+          "cost": 0.05
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:44:16.575Z",
+    "duration": 1003,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.05,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.39999999999999
+    }
+  },
+  {
+    "id": "task-1753584256581",
+    "taskType": "feature",
+    "description": "First task",
+    "startTime": "2025-07-27T02:44:16.581Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:44:17.865Z",
+    "duration": 1284
+  },
+  {
+    "id": "task-1753584257874",
+    "taskType": "feature",
+    "description": "Quality test",
+    "startTime": "2025-07-27T02:44:17.874Z",
+    "agentMetrics": [],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 90
+    },
+    "endTime": "2025-07-27T02:44:19.896Z",
+    "duration": 2022
+  },
+  {
+    "id": "task-1753584500294",
+    "taskType": "bug-fix",
+    "description": "Test bug",
+    "startTime": "2025-07-27T02:48:20.294Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:48:21.114Z",
+    "duration": 820
+  },
+  {
+    "id": "task-1753584506907",
+    "taskType": "bug-fix",
+    "description": "Error test",
+    "startTime": "2025-07-27T02:48:26.907Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:48:26.907Z",
+        "success": false,
+        "endTime": "2025-07-27T02:48:26.907Z",
+        "duration": 0,
+        "error": "Test error"
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:48:26.907Z",
+    "duration": 0,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.01,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.88
+    }
+  },
+  {
+    "id": "task-1753584511528",
+    "taskType": "bug-fix",
+    "description": "Cost test",
+    "startTime": "2025-07-27T02:48:31.528Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:48:31.528Z",
+        "success": true,
+        "endTime": "2025-07-27T02:48:32.530Z",
+        "duration": 1002,
+        "tokenUsage": {
+          "input": 100,
+          "output": 200,
+          "cost": 0.05
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:48:32.531Z",
+    "duration": 1003,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.05,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.39999999999999
+    }
+  },
+  {
+    "id": "task-1753584512540",
+    "taskType": "feature",
+    "description": "First task",
+    "startTime": "2025-07-27T02:48:32.540Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:48:33.738Z",
+    "duration": 1198
+  },
+  {
+    "id": "task-1753584513749",
+    "taskType": "feature",
+    "description": "Quality test",
+    "startTime": "2025-07-27T02:48:33.749Z",
+    "agentMetrics": [],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 90
+    },
+    "endTime": "2025-07-27T02:48:35.386Z",
+    "duration": 1637
+  },
+  {
+    "id": "task-1753584608627",
+    "taskType": "bug-fix",
+    "description": "Test bug",
+    "startTime": "2025-07-27T02:50:08.627Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:50:11.176Z",
+    "duration": 2549
+  },
+  {
+    "id": "task-1753584617783",
+    "taskType": "bug-fix",
+    "description": "Error test",
+    "startTime": "2025-07-27T02:50:17.783Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:50:17.783Z",
+        "success": false,
+        "endTime": "2025-07-27T02:50:17.783Z",
+        "duration": 0,
+        "error": "Test error"
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:50:17.783Z",
+    "duration": 0,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.01,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.88
+    }
+  },
+  {
+    "id": "task-1753584621114",
+    "taskType": "bug-fix",
+    "description": "Cost test",
+    "startTime": "2025-07-27T02:50:21.114Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:50:21.114Z",
+        "success": true,
+        "endTime": "2025-07-27T02:50:22.117Z",
+        "duration": 1003,
+        "tokenUsage": {
+          "input": 100,
+          "output": 200,
+          "cost": 0.05
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:50:22.118Z",
+    "duration": 1004,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.05,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.39999999999999
+    }
+  },
+  {
+    "id": "task-1753584622127",
+    "taskType": "feature",
+    "description": "First task",
+    "startTime": "2025-07-27T02:50:22.127Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:50:23.071Z",
+    "duration": 944
+  },
+  {
+    "id": "task-1753584623080",
+    "taskType": "feature",
+    "description": "Quality test",
+    "startTime": "2025-07-27T02:50:23.080Z",
+    "agentMetrics": [],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 90
+    },
+    "endTime": "2025-07-27T02:50:24.656Z",
+    "duration": 1576
+  },
+  {
+    "id": "task-1753584641371",
+    "taskType": "bug-fix",
+    "description": "Test bug",
+    "startTime": "2025-07-27T02:50:41.371Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:50:44.173Z",
+    "duration": 2802
+  },
+  {
+    "id": "task-1753584650046",
+    "taskType": "bug-fix",
+    "description": "Error test",
+    "startTime": "2025-07-27T02:50:50.046Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:50:50.046Z",
+        "success": false,
+        "endTime": "2025-07-27T02:50:50.046Z",
+        "duration": 0,
+        "error": "Test error"
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:50:50.046Z",
+    "duration": 0,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.01,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.88
+    }
+  },
+  {
+    "id": "task-1753584656607",
+    "taskType": "bug-fix",
+    "description": "Cost test",
+    "startTime": "2025-07-27T02:50:56.607Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:50:56.607Z",
+        "success": true,
+        "endTime": "2025-07-27T02:50:57.608Z",
+        "duration": 1001,
+        "tokenUsage": {
+          "input": 100,
+          "output": 200,
+          "cost": 0.05
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:50:57.609Z",
+    "duration": 1002,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.05,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.39999999999999
+    }
+  },
+  {
+    "id": "task-1753584657616",
+    "taskType": "feature",
+    "description": "First task",
+    "startTime": "2025-07-27T02:50:57.616Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:50:58.956Z",
+    "duration": 1340
+  },
+  {
+    "id": "task-1753584658966",
+    "taskType": "feature",
+    "description": "Quality test",
+    "startTime": "2025-07-27T02:50:58.966Z",
+    "agentMetrics": [],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 90
+    },
+    "endTime": "2025-07-27T02:51:00.695Z",
+    "duration": 1729
+  },
+  {
+    "id": "task-1753584699031",
+    "taskType": "bug-fix",
+    "description": "Error test",
+    "startTime": "2025-07-27T02:51:39.031Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:51:39.031Z",
+        "success": false,
+        "endTime": "2025-07-27T02:51:39.031Z",
+        "duration": 0,
+        "error": "Test error"
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:51:39.031Z",
+    "duration": 0,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.01,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.88
+    }
+  },
+  {
+    "id": "task-1753584703614",
+    "taskType": "bug-fix",
+    "description": "Cost test",
+    "startTime": "2025-07-27T02:51:43.614Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:51:43.614Z",
+        "success": true,
+        "endTime": "2025-07-27T02:51:44.615Z",
+        "duration": 1001,
+        "tokenUsage": {
+          "input": 100,
+          "output": 200,
+          "cost": 0.05
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:51:44.615Z",
+    "duration": 1001,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.05,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.39999999999999
+    }
+  },
+  {
+    "id": "task-1753584704622",
+    "taskType": "feature",
+    "description": "First task",
+    "startTime": "2025-07-27T02:51:44.622Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:51:46.990Z",
+    "duration": 2368
+  },
+  {
+    "id": "task-1753584706999",
+    "taskType": "feature",
+    "description": "Quality test",
+    "startTime": "2025-07-27T02:51:46.999Z",
+    "agentMetrics": [],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 90
+    },
+    "endTime": "2025-07-27T02:51:49.479Z",
+    "duration": 2480
+  },
+  {
+    "id": "task-1753584783818",
+    "taskType": "bug-fix",
+    "description": "Error test",
+    "startTime": "2025-07-27T02:53:03.818Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:53:03.818Z",
+        "success": false,
+        "endTime": "2025-07-27T02:53:03.818Z",
+        "duration": 0,
+        "error": "Test error"
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:53:03.818Z",
+    "duration": 0,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.01,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.88
+    }
+  },
+  {
+    "id": "task-1753584789402",
+    "taskType": "bug-fix",
+    "description": "Cost test",
+    "startTime": "2025-07-27T02:53:09.402Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:53:09.402Z",
+        "success": true,
+        "endTime": "2025-07-27T02:53:10.404Z",
+        "duration": 1002,
+        "tokenUsage": {
+          "input": 100,
+          "output": 200,
+          "cost": 0.05
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:53:10.404Z",
+    "duration": 1002,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.05,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.39999999999999
+    }
+  },
+  {
+    "id": "task-1753584790413",
+    "taskType": "feature",
+    "description": "First task",
+    "startTime": "2025-07-27T02:53:10.413Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:53:12.485Z",
+    "duration": 2072
+  },
+  {
+    "id": "task-1753584792495",
+    "taskType": "feature",
+    "description": "Quality test",
+    "startTime": "2025-07-27T02:53:12.495Z",
+    "agentMetrics": [],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 90
+    },
+    "endTime": "2025-07-27T02:53:13.253Z",
+    "duration": 758
+  },
+  {
+    "id": "task-1753584840256",
+    "taskType": "bug-fix",
+    "description": "Error test",
+    "startTime": "2025-07-27T02:54:00.256Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:54:00.256Z",
+        "success": false,
+        "endTime": "2025-07-27T02:54:00.256Z",
+        "duration": 0,
+        "error": "Test error"
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:54:00.256Z",
+    "duration": 0,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.01,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.88
+    }
+  },
+  {
+    "id": "task-1753584847331",
+    "taskType": "bug-fix",
+    "description": "Cost test",
+    "startTime": "2025-07-27T02:54:07.331Z",
+    "agentMetrics": [
+      {
+        "agentName": "TestAgent",
+        "startTime": "2025-07-27T02:54:07.331Z",
+        "success": true,
+        "endTime": "2025-07-27T02:54:08.332Z",
+        "duration": 1001,
+        "tokenUsage": {
+          "input": 100,
+          "output": 200,
+          "cost": 0.05
+        }
+      }
+    ],
+    "quality": {},
+    "endTime": "2025-07-27T02:54:08.332Z",
+    "duration": 1001,
+    "comparison": {
+      "manualTime": 5,
+      "aiTime": 0.1,
+      "timeImprovement": 95,
+      "aiQuality": {},
+      "aiCost": 0.05,
+      "manualCost": 8.333333333333334,
+      "costSavings": 99.39999999999999
+    }
+  },
+  {
+    "id": "task-1753584848341",
+    "taskType": "feature",
+    "description": "First task",
+    "startTime": "2025-07-27T02:54:08.341Z",
+    "agentMetrics": [],
+    "quality": {},
+    "endTime": "2025-07-27T02:54:11.157Z",
+    "duration": 2816
+  },
+  {
+    "id": "task-1753584851166",
+    "taskType": "feature",
+    "description": "Quality test",
+    "startTime": "2025-07-27T02:54:11.166Z",
+    "agentMetrics": [],
+    "quality": {
+      "codeQualityScore": 85,
+      "bugsIntroduced": 0,
+      "testCoverage": 90
+    },
+    "endTime": "2025-07-27T02:54:13.968Z",
+    "duration": 2802
   }
 ]

@@ -10,6 +10,9 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "test": "jest",
+    "test:unit": "jest src",
+    "test:integration": "jest tests/integration",
+    "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.ts",
     "typecheck": "tsc --noEmit",
     "demo": "npm run build && node dist/examples/workflow-demo.js",
@@ -19,7 +22,7 @@
     "demo:metrics": "npm run build && node dist/demos/metrics-demo.js",
     "test:notify": "./scripts/test-notify.sh",
     "validate": "npm run build && node dist/scripts/validate-structure.js",
-    "precommit": "npm run validate && npm run lint && npm run typecheck"
+    "precommit": "npm run validate && npm run lint && npm run typecheck && npm run test"
   },
   "repository": {
     "type": "git",
