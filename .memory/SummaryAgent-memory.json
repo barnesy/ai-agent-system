@@ -1,0 +1,28 @@
+[
+  {
+    "id": "SummaryAgent-knowledge-1753585555857-0.047123338523371805",
+    "agentName": "SummaryAgent",
+    "timestamp": "2025-07-27T03:05:55.857Z",
+    "type": "knowledge",
+    "content": {
+      "topic": "Topic1",
+      "facts": [
+        "Fact1"
+      ],
+      "confidence": 0.8
+    }
+  },
+  {
+    "id": "SummaryAgent-knowledge-1753585555857-0.4886400044519281",
+    "agentName": "SummaryAgent",
+    "timestamp": "2025-07-27T03:05:55.857Z",
+    "type": "knowledge",
+    "content": {
+      "topic": "Topic2",
+      "facts": [
+        "Fact2"
+      ],
+      "confidence": 0.8
+    }
+  }
+]

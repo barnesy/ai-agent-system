@@ -1,0 +1,16 @@
+[
+  {
+    "id": "TestAgent-knowledge-1753585555856-0.009131849394000024",
+    "agentName": "TestAgent",
+    "timestamp": "2025-07-27T03:05:55.856Z",
+    "type": "knowledge",
+    "content": {
+      "topic": "Testing",
+      "facts": [
+        "Unit tests are important",
+        "Mock data is useful"
+      ],
+      "confidence": 0.8
+    }
+  }
+]
