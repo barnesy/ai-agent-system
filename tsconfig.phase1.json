@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "jsx": "react"
+  },
+  "include": [
+    "src/config/**/*",
+    "src/agents/base-agent.ts",
+    "src/agents/research-agent-simple.ts",
+    "src/agents/implementation-agent-simple.ts", 
+    "src/agents/index-phased.ts",
+    "src/cli/phase1-cli.ts",
+    "src/cli/phase1-dashboard.ts",
+    "src/orchestrator/orchestrator.ts",
+    "src/metrics/token-tracker.ts"
+  ],
+  "exclude": [
+    "src/visual/**/*",
+    "src/chat/**/*",
+    "src/agents/index-ai.ts",
+    "src/workflows/templates/**/*",
+    "node_modules",
+    "dist"
+  ]
+}
