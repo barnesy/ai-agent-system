@@ -1,0 +1,114 @@
+name: Test and Notify
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      feature:
+        description: 'Feature to test'
+        required: false
+        default: 'Manual Test'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Run tests
+      run: npm test
+      
+    - name: Setup test environment
+      id: test-env
+      run: |
+        # Install CLI globally
+        npm link
+        
+        # Run test command
+        ai-agent test "${{ github.event.inputs.feature || 'CI Test' }}" --no-interactive
+        
+        # Get test results
+        TEST_ID=$(cat .tests/latest-notification.json | jq -r '.testId')
+        echo "test_id=$TEST_ID" >> $GITHUB_OUTPUT
+        
+    - name: Upload test artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-${{ steps.test-env.outputs.test_id }}
+        path: |
+          .tests/latest-notification.json
+          .tests/latest-test.md
+          
+    - name: Create GitHub notification
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const testReport = JSON.parse(fs.readFileSync('.tests/latest-notification.json', 'utf-8'));
+          
+          const comment = `## 🧪 Test Environment Ready
+          
+          **Test ID:** ${testReport.testId}
+          **Feature:** ${testReport.feature}
+          **Status:** ✅ ${testReport.status}
+          
+          ### Test Results
+          - Unit Tests: ${testReport.results.unit.passed} passed
+          - Integration Tests: ${testReport.results.integration.passed} passed
+          - Coverage: ${testReport.metrics.coverage}%
+          
+          ### Artifacts
+          Test results have been uploaded as artifacts for this workflow run.
+          
+          ### Instructions
+          ${testReport.instructions.map(i => `- ${i}`).join('\n')}
+          `;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });
+          
+    - name: Send Slack notification
+      if: env.SLACK_WEBHOOK_URL != ''
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      run: |
+        TEST_REPORT=$(cat .tests/latest-notification.json)
+        curl -X POST $SLACK_WEBHOOK_URL \
+          -H 'Content-Type: application/json' \
+          -d "{
+            \"text\": \"Test Ready: $(echo $TEST_REPORT | jq -r '.feature')\",
+            \"attachments\": [{
+              \"color\": \"good\",
+              \"fields\": [
+                {\"title\": \"Test ID\", \"value\": \"$(echo $TEST_REPORT | jq -r '.testId')\", \"short\": true},
+                {\"title\": \"Coverage\", \"value\": \"$(echo $TEST_REPORT | jq -r '.metrics.coverage')%\", \"short\": true}
+              ]
+            }]
+          }"
+          
+    - name: Deploy to test environment
+      if: github.ref == 'refs/heads/main'
+      run: |
+        echo "Deploy to test environment would happen here"
+        # Could deploy to Vercel, Netlify, or custom server
+        # Example: vercel deploy --prod

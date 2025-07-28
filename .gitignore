@@ -6,8 +6,10 @@ __pycache__/
 # Environment
 .env
 .env.local
+.env.*.local
 venv/
 .venv/
+.ai-config.json
 
 # IDE
 .vscode/

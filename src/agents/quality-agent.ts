@@ -34,7 +34,8 @@ export class QualityAgent extends BaseAgent {
       canHandle: (task: string) => {
         const qualityKeywords = [
           'review', 'check', 'analyze', 'audit', 'inspect',
-          'validate', 'verify', 'assess', 'evaluate', 'quality'
+          'validate', 'verify', 'assess', 'evaluate', 'quality',
+          'security', 'vulnerability', 'implications', 'risk'
         ];
         return qualityKeywords.some(keyword => 
           task.toLowerCase().includes(keyword)

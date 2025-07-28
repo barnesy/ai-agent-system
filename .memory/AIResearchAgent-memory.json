@@ -1,0 +1,24 @@
+[
+  {
+    "id": "AIResearchAgent-conv-1753586416732-0.8548421192062505",
+    "agentName": "AIResearchAgent",
+    "timestamp": "2025-07-27T03:20:16.732Z",
+    "type": "conversation",
+    "content": {
+      "input": "Research best practices for error handling in TypeScript",
+      "output": "AIResearchAgent completed: Research best practices for error handling in TypeScript"
+    },
+    "ttl": 604800
+  },
+  {
+    "id": "AIResearchAgent-conv-1753586430728-0.3271223298068997",
+    "agentName": "AIResearchAgent",
+    "timestamp": "2025-07-27T03:20:30.728Z",
+    "type": "conversation",
+    "content": {
+      "input": "List 3 TypeScript best practices",
+      "output": "AIResearchAgent completed: List 3 TypeScript best practices"
+    },
+    "ttl": 604800
+  }
+]
